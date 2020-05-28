@@ -1,6 +1,10 @@
+
+
 body{
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+ font-family: lobster;
+    
+   
 }
 
 
@@ -8,14 +12,54 @@ body{
     margin: 30px 8px;
     padding: 15px;
     border-radius: 5px;
-    background: #eee;
+    background-color: rgb(15, 31, 47);
 }
 main{
 display: block;
 }
 #img-div{
-    background:white ;
+    color:floralwhite;
+    backgroundrgba(1, 1, 1, 0); ;
     padding: 10px;
-    margin: 0;
+    margin: 5px;
 
 }
+#title{
+    font-family: Poiret One, sans-serif;
+    margin: .8em 0 .8em 0em;
+    letter-spacing: 0.1em; 
+    font-size: 3em;
+    color: floralwhite;
+    
+}
+#Manish-info{
+    color: floralwhite;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+
+
+#btn1:hover{
+background-color:red
+}
+
+#btn1{
+    background-color: grey;
+   text-shadow: lawngreen;
+   font-size:30px;
+}
+
+.btt{
+background-color: lightcoral;
+    
+}
+
+.Cele{
+    background-color: mintcream;
+}
+
+
+   .rotate90 {
+    
+  transform: rotate(45deg);
+  
+   }
