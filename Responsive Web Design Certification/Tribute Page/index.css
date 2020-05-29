@@ -28,7 +28,7 @@ body {
 #about {
     
     background-color: rgb(15, 31, 47);
-    opacity: .2;
+    
 }
 
 #Manish-info {
@@ -66,51 +66,4 @@ div.ach {
 
 #cc {
     color: red;
-}
-
-.block {
-    background-color: rgb(223, 217, 217);
-    
-}
-
-#demo4 {
-    position: relative;
-}
-
-#demo4:before {
-    position: absolute;
-    content: "";
-    z-index: -1;
-    bottom: 15px;
-    left: 8px;
-    top: 80%;
-    width: 50%;
-    background: rgb(214, 209, 209);
-    -webkit-box-shadow: 0 18px 15px #486685;
-    -moz-box-shadow: 0 18px 15px #486685;
-    box-shadow: 0 18px 15px #486685;
-    -webkit-transform: rotate(-10deg);
-    -moz-transform: rotate(-10deg);
-    -o-transform: rotate(-10deg);
-    -ms-transform: rotate(-10deg);
-    transform: rotate(-10deg);
-}
-
-#demo4:after {
-    position: absolute;
-    content: "";
-    z-index: -1;
-    bottom: 15px;
-    right: 8px;
-    top: 80%;
-    width: 50%;
-    background: rgb(214, 209, 209);
-    -webkit-box-shadow: 0 18px 15px #486685;
-    -moz-box-shadow: 0 18px 15px #486685;
-    box-shadow: 0 18px 15px #486685;
-    -webkit-transform: rotate(10deg);
-    -moz-transform: rotate(10deg);
-    -o-transform: rotate(10deg);
-    -ms-transform: rotate(10deg);
-    transform: rotate(10deg);
 }
