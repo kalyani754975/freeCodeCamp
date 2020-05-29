@@ -4,7 +4,7 @@ body{
     text-align: center;
  font-family: lobster;
     
-   
+
 }
 
 
@@ -63,3 +63,25 @@ background-color: lightcoral;
   transform: rotate(45deg);
   
    }
+
+
+
+.Cele{
+    flex:25%;
+
+}
+
+
+
+div.ach{
+   
+
+    background-color:rgb(15,31,47);
+
+    background-image: url("https://image.ibb.co/dm5Nyk/overlay.png");
+ 
+}
+
+#cc{
+    color:red;
+}
