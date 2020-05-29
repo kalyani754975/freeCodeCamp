@@ -17,14 +17,16 @@
             <button>Achievement</button>
             <a href="#cc"><button>celebrities</button> </a>
         </div>
-        <h1 id="title">Manish Malhotra</h1>
-        <p style="background-color: blue;">A Bollywood designer who canged the Bollywood style</p>
-        <figure id="img-div">
-            <img id="image" src="m.jpg" alt="image not found">
-            <figcaption id="img-caption">
-                The Bollywood Diva
-            </figcaption>
-        </figure>
+        <section id="about">
+            <h1 id="title">Manish Malhotra</h1>
+            <p style="background-color: blue;">A Bollywood designer who canged the Bollywood style</p>
+            <figure id="img-div">
+                <img id="image" src="m.jpg" style="width:100%; max-width: 1000px;">
+                <figcaption id="img-caption">
+                    The Bollywood Diva
+                </figcaption>
+            </figure>
+        </section>
         <section id="Manish-info">
             <h3 id="Headline">Manish Malhotra timeline</h3>
             <ul>
@@ -92,21 +94,6 @@
                 Moss,
                 Naomi Campbell etc.</p>
         </div>
-        <div id="Cele">
-            <h1 id="cc">celebrities who wore The dress designed by Manish Malhotra</h1>
-            <img src="tribute\1.jpg" alt="image not found" class="rotate90">
-            <br>
-            <img src="tribute\3.jpg" alt="">
-            <img src="tribute\4.jpg" alt="">
-            <img src="tribute\5.jpg" alt="">
-            <img src="tribute\6.jpg" alt="">
-            <img src="tribute\7.jpg" alt="">
-            <img src="tribute\8.jpg" alt="">
-            <img src="tribute\9.jpg" alt="">
-            <img src="tribute\10.jpg" alt="">
-            <img src="tribute\11.jpg" alt="">
-            <img src="tribute\12.jpg" alt="">
-        </div>
 
 
 
@@ -137,10 +124,10 @@
 
             /* Create four equal columns that sits next to each other */
             .column {
-                -ms-flex: 25%;
+                -ms-flex: 33.3%;
                 /* IE10 */
-                flex: 25%;
-                max-width: 25%;
+                flex: 33.3%;
+                max-width: 33.3%;
                 padding: 0 4px;
             }
 
@@ -148,6 +135,7 @@
                 margin-top: 8px;
                 vertical-align: middle;
                 width: 100%;
+                padding: 15px;
             }
 
             /* Responsive layout - makes a two column-layout instead of four columns */
@@ -170,39 +158,36 @@
         </style>
 
 
-        <!-- Header -->
-        <div class="header">
-            <h1>Responsive Image Grid</h1>
-            <p>Resize the browser window to see the responsive effect.</p>
-        </div>
+        
 
-        <!-- Photo Grid -->
-        <div class="row">
-            <div class="column">
-                <img src="tribute\1.jpg" style="width:100%">
-                <img src="tribute\3.jpg" style="width:100%">
-                <img src="tribute\4.jpg" style="width:100%">
-                <img src="tribute\5.jpg" style="width:100%">
+        <div id="Cele">
+            <h1 id="cc">celebrities who wore The dress designed by Manish Malhotra</h1>
+
+            <!-- Photo Grid -->
+            <div class="row">
+                <div class="column">
+                    <div id="demo4" class="block">
+                        <img src="tribute\1.jpg" style="width:100%; opacity: 1;" alt="image not found">
+                    </div>
+
+
+
+                    <img src="tribute\3.jpg" style="width:100%">
+                    <img src="tribute\4.jpg" style="width:100%">
+                    <img src="tribute\5.jpg" style="width:100%">
+                </div>
+                <div class="column">
+                    <img src="tribute\6.jpg" style="width:100%">
+                    <img src="tribute\7.jpg" style="width:100%">
+                    <img src="tribute\20.jpg" style="width:100%">
+                </div>
+                <div class="column">
+                    <img src="tribute\11.jpg" style="width:100%">
+                    <img src="tribute\12.jpg" style="width:100%">
+                    <img src="tribute\18.jpg" style="width:100%">
+                </div>
+
             </div>
-            <div class="column">
-                <img src="tribute\6.jpg" style="width:100%">
-                <img src="tribute\7.jpg" style="width:100%">
-                <img src="tribute\8.jpg" style="width:100%">
-                <img src="tribute\10.jpg" style="width:100%">
-            </div>
-            <div class="column">
-                <img src="tribute\11.jpg" style="width:100%">
-                <img src="tribute\12.jpg" style="width:100%">
-                <img src="tribute\13.jpg" style="width:100%">
-                <img src="tribute\14.jpg" style="width:100%">
-                <img src="tribute\15.jpg" style="width:100%">
-                <img src="tribute\16.jpg" style="width:100%">
-                <img src="tribute\17.jpg" style="width:100%">
-                <img src="tribute\18.jpg" style="width:100%">
-                <img src="tribute\19.jpg" style="width:100%">
-                <img src="tribute\20.jpg" style="width:100%">
-            </div>
-            
         </div>
 
 </body>
