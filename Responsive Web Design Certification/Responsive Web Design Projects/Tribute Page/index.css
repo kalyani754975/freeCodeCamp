@@ -1,76 +1,14 @@
-body {
-    text-align: center;
-    font-family: lobster;
-}
-
-.main {
-    background-color: rgb(244, 243, 246);
-}
-
 .navigation {
     padding: 10px;
-    background-color: white;
 }
 
-.navigation img {
-    width: 110px;
-
+.navigation .row .column .w3-card-4 img {
+    width: 120px;
 }
 
-.landing {
-    /* background-color: rgb(15, 31, 47);
-    background-image: url("https://image.ibb.co/dm5Nyk/overlay.png"); */
-}
+/* Navigation buttons grid -------------------------------------------------------------------- */
 
-#timeline {
-    color: floralwhite;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: rgb(15, 31, 47);
-    background-image: url("https://image.ibb.co/dm5Nyk/overlay.png");
-}
-
-#achievements {
-    background-color: rgb(165, 14, 9);
-    background-image: url("https://image.ibb.co/dm5Nyk/overlay.png");
-    opacity: 0.5;
-}
-
-#celebrities {
-    flex: 25%;
-}
-#img-div {
-    color: floralwhite;
-    backgroundrgba(1, 1, 1, 0);
-    ;
-    padding: 10px;
-    margin: 5px;
-}
-
-#title {
-    font-family: Poiret One, sans-serif;
-    margin: .8em 0 .8em 0em;
-    letter-spacing: 0.1em;
-    font-size: 3em;
-    color: floralwhite;
-}
-
-#btn1 {
-    background-color: grey;
-    text-shadow: lawngreen;
-    font-size: 30px;
-}
-
-.rotate90 {
-    transform: rotate(2deg);
-}
-
-#cc {
-    color: red;
-}
-
-/* Photo gallery grid -------------------------------------------------------------------- */
-
-.row {
+.navigation .row {
     display: -ms-flexbox;
     /* IE10 */
     display: flex;
@@ -79,17 +17,91 @@ body {
     flex-wrap: wrap;
 }
 
-/* Create four equal columns that sits next to each other */
+/* Create columns that sits next to each other */
 
-.column {
+.navigation .column {
+    -ms-flex: 25%;
+    /* IE10 */
+    max-width: 100%;
+    margin-left: 10px;
+}
+
+.navigation .column img {
+    vertical-align: middle;
+    width: 100%;
+    padding: 3px;
+}
+
+/* Navigation buttons grid -------------------------------------------------------------------- */
+
+#title {
+    margin-left: 1em;
+    margin-top: -.2em;
+    letter-spacing: 0.3em;
+    font-size: 4em;
+    color: rgba(0, 0, 0, 0.562);
+}
+
+#tagLine {
+    margin-left: 1em;
+    margin-top: -.2em;
+    letter-spacing: 0.3em;
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.562);
+}
+
+.landing {
+    margin-top: -2em;
+    background-color: red;
+    text-align: center;
+}
+
+#timeline {
+    background-color: green;
+}
+
+#achievements {
+    background-color: blue;
+}
+
+#celebrities {
+    background-color: rgb(244, 243, 246);
+}
+
+#img-div {
+    color: floralwhite;
+    backgroundrgba(1, 1, 1, 0);
+    ;
+    padding: 10px;
+    margin: 5px;
+}
+
+#cc {
+    color: red;
+}
+
+/* Photo gallery grid -------------------------------------------------------------------- */
+
+#celebrities .row {
+    display: -ms-flexbox;
+    /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap;
+    /* IE10 */
+    flex-wrap: wrap;
+}
+
+/* Create three equal columns that sits next to each other */
+
+#celebrities .column {
     -ms-flex: 33.3%;
     /* IE10 */
     flex: 33.3%;
     max-width: 33.3%;
-    padding: 20px;
+    padding: 10px;
 }
 
-.column img {
+#celebrities .column img {
     vertical-align: middle;
     width: 100%;
     padding: 15px;
@@ -98,7 +110,17 @@ body {
 /* Responsive layout - makes a two column-layout instead of four columns */
 
 @media screen and (max-width: 800px) {
-    .column {
+    .navigation .row .column .w3-card-4 img {
+        width: 120px;
+    }
+    #title {
+        margin-left: 0em;
+        margin-top: 0em;
+        letter-spacing: 0.1em;
+        font-size: 3.3em;
+        color: rgba(0, 0, 0, 0.562);
+    }
+    #celebrities .column {
         -ms-flex: 50%;
         flex: 50%;
         max-width: 50%;
@@ -108,7 +130,16 @@ body {
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 
 @media screen and (max-width: 600px) {
-    .column {
+    .navigation .row .column .w3-card-4 img {
+        width: 100px;
+    }
+    #title {
+        margin-top: .5em;
+        letter-spacing: 0.1em;
+        font-size: 2em;
+        color: rgba(0, 0, 0, 0.562);
+    }
+    #celebrities .column {
         -ms-flex: 100%;
         flex: 100%;
         max-width: 100%;
