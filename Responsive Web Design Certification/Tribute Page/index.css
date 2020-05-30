@@ -27,14 +27,17 @@ body {
 
 #about {
     
+
     background-color: rgb(15, 31, 47);
     background-image: url("https://image.ibb.co/dm5Nyk/overlay.png");
+    
 }
 
 #Manish-info {
     color: floralwhite;
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: rgb(15, 31, 47);
+    background-image: url("https://image.ibb.co/dm5Nyk/overlay.png");
 }
 
 #btn1 {
@@ -45,6 +48,7 @@ body {
 
 .btt {
     background-color: lightcoral;
+    background-image: url("https://image.ibb.co/dm5Nyk/overlay.png");
 }
 
 .Cele {
@@ -60,8 +64,9 @@ body {
 }
 
 div.ach {
-    background-color: red;
+    background-color: rgb(165, 14, 9);
     background-image: url("https://image.ibb.co/dm5Nyk/overlay.png");
+    opacity: 0.5;
 }
 
 #cc {
