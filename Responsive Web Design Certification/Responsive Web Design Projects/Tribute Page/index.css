@@ -9,15 +9,17 @@ body {
 
 .navigation {
     padding: 10px;
+    background-color: white;
 }
 
 .navigation img {
-    width: 100px;
+    width: 110px;
+
 }
 
 .landing {
-    background-color: rgb(15, 31, 47);
-    background-image: url("https://image.ibb.co/dm5Nyk/overlay.png");
+    /* background-color: rgb(15, 31, 47);
+    background-image: url("https://image.ibb.co/dm5Nyk/overlay.png"); */
 }
 
 #timeline {
