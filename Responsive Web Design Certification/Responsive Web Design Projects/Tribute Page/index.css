@@ -179,6 +179,7 @@
     background-color: white;
     position: relative;
     border-radius: 6px;
+    color: rgba(0, 0, 0, 0.562);
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
@@ -212,7 +213,7 @@
 }
 
 #achievements {
-    background-color: rgb(245, 209, 209);
+    background-color: rgb(243, 230, 230);
     padding-top: 110px;
     margin-top: -110px;
     padding-bottom: 200px;
