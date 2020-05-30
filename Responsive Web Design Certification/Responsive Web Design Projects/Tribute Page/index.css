@@ -214,13 +214,17 @@
     background-color: white;
     padding-top: 80px;
     margin-top: -80px;
-    padding-bottom: 80px;
+    padding-bottom: 200px;
     text-align: center;
 }
 
 #achievements h2 {
     color: rgba(0, 0, 0, 0.562);
     text-align: center;
+}
+
+#achievements h3 {
+    color: rgba(0, 0, 0, 0.562);
 }
 
 #achievements .column {
