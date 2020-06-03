@@ -1,3 +1,7 @@
+/* MacBook Pro */
+
+@media (max-width: 2881px) {
+
 .navigation {
     margin-top: 3em;
     position: -webkit-sticky;
@@ -7,7 +11,35 @@
     background-color: white;
     z-index: 2;
 }
+}
 
+/* Dell */
+
+@media (max-width: 1366px) {
+
+.navigation {
+    margin-top: 1em;
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 2;
+}
+
+/* Samsung A8+ */
+
+@media (max-width: 1080px) {
+
+}
+
+/* Small phone screen */
+
+@media (max-width: 1366px) {
+
+}
+
+}
 .navigation .row .column .w3-card-4 img {
     width: 120px;
 }
