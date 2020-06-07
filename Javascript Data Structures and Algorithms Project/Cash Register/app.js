@@ -1,11 +1,9 @@
 function checkCashRegister(price, cash, cid) {
 
-    // Calculate change
-    var temp_change = cash - price;
-    denomination = [100, 20, 10, 5, 1, 0.25, 0.10, 0.05, 0.01];
-
-    var i;
-    var result;
+    let temp_change = cash - price;
+    let denomination = [100, 20, 10, 5, 1, 0.25, 0.10, 0.05, 0.01];
+    let i;
+    let result;
     let cid_change = {
         status: "",
         change: []
@@ -17,37 +15,56 @@ function checkCashRegister(price, cash, cid) {
             switch (denomination[i]) {
                 case 100:
                     denom = "ONE HUNDRED";
+                    cid_denom = 8;
                     break;
                 case 20:
                     denom = "TWENTY";
+                    cid_denom = 7;
                     break;
                 case 10:
                     denom = "TEN";
+                    cid_denom = 6;
                     break;
                 case 5:
                     denom = "FIVE";
+                    cid_denom = 5;
                     break;
                 case 1:
                     denom = "ONE";
+                    cid_denom = 4;
                     break;
                 case 0.25:
                     denom = "QUARTER";
+                    cid_denom = 3;
                     break;
                 case 0.10:
                     denom = "DIME";
+                    cid_denom = 2;
                     break;
                 case 0.05:
                     denom = "NICKEL";
+                    cid_denom = 1;
                     break;
                 case 0.01:
                     denom = "PENNY";
+                    cid_denom = 0;
                     break;
             }
+            if (cid[cid_denom][1] <= parseInt(result) * denomination[i]) {
+                result = cid[cid_denom][1] / denomination[i];
+            }
+            cid[cid_denom][1] -= parseInt(result) * denomination[i];
             cid_change.change.push([denom, parseInt(result)]);
             temp_change -= parseInt(result) * denomination[i];
             result = temp_change;
         }
     }
+
+
+
+
+
+
 
     cid[8][1]; // 100
     Number_100 = cid[8][1] / 100;
@@ -62,6 +79,7 @@ function checkCashRegister(price, cash, cid) {
     cid[2][1]; // 3.1
     cid[1][1]; // 2.05
     cid[0][1]; // 1.01
+
 
 }
 
