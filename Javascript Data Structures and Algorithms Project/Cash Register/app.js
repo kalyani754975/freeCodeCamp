@@ -1,90 +1,79 @@
 function checkCashRegister(price, cash, cid) {
 
-    let temp_change = cash - price;
-    let denomination = [100, 20, 10, 5, 1, 0.25, 0.10, 0.05, 0.01];
-    let i;
-    let result;
-    let cid_change = {
-        status: "",
-        change: []
-    };
+  let changeCents = (cash - price) * 100;
 
-    for (i = 0; i < denomination.length; i++) {
-        result = temp_change / denomination[i];
-        if (result >= 1) {
-            switch (denomination[i]) {
-                case 100:
-                    denom = "ONE HUNDRED";
-                    cid_denom = 8;
-                    break;
-                case 20:
-                    denom = "TWENTY";
-                    cid_denom = 7;
-                    break;
-                case 10:
-                    denom = "TEN";
-                    cid_denom = 6;
-                    break;
-                case 5:
-                    denom = "FIVE";
-                    cid_denom = 5;
-                    break;
-                case 1:
-                    denom = "ONE";
-                    cid_denom = 4;
-                    break;
-                case 0.25:
-                    denom = "QUARTER";
-                    cid_denom = 3;
-                    break;
-                case 0.10:
-                    denom = "DIME";
-                    cid_denom = 2;
-                    break;
-                case 0.05:
-                    denom = "NICKEL";
-                    cid_denom = 1;
-                    break;
-                case 0.01:
-                    denom = "PENNY";
-                    cid_denom = 0;
-                    break;
-            }
-            if (cid[cid_denom][1] <= parseInt(result) * denomination[i]) {
-                result = cid[cid_denom][1] / denomination[i];
-            }
-            cid[cid_denom][1] -= parseInt(result) * denomination[i];
-            cid_change.change.push([denom, parseInt(result)]);
-            temp_change -= parseInt(result) * denomination[i];
-            result = temp_change;
-        }
+  //Object that will be returned
+  let change = {
+    status: "",
+    change: []
+  };
+
+  //Calculate total money in drawer
+  var sumCents = 0;
+  for (let i = 0; i < cid.length; i++) {
+    sumCents += cid[i][1] * 100;
+  }
+
+  //CLOSED CASE
+  if (sumCents === changeCents) {
+    change.status = "CLOSED";
+    change.change.push(...cid);
+    return change;
+  }
+
+  //Simple INSUFFICENT FUNDS CASE
+  else if (sumCents < changeCents) {
+    change.status = "INSUFFICIENT_FUNDS";
+    return change;
+  }
+
+  //Either OPEN or INSUFFICIENT FUNDS CASE
+  let exactChangeNeededCents = changeCents;
+  let denominationCents = [1, 5, 10, 25, 100, 500, 1000, 2000, 10000];
+  let reverseIndex = cid.length - 1; //Use cid array going from right to left
+  let pushValueDollar = 0;
+
+  //Loop through all elements of cid starting from One-hundred dollars
+  for (reverseIndex; reverseIndex >= 0; reverseIndex--) {
+
+    //If exact change needed is greater than total money in this particular
+    //denomination then calculated push value will be total of all the money
+    //from this denomination.
+    if (exactChangeNeededCents >= cid[reverseIndex][1] * 100) {
+      pushValueDollar = cid[reverseIndex][1];
+      exactChangeNeededCents -= pushValueDollar * 100;
     }
 
+    //If exact change needed is less than total money in this particular
+    //denomination then loop through this denomination and calculate how
+    //much of this denomination should be pushed to change object's change array.
+    else {
+      while ((exactChangeNeededCents > 0) && (exactChangeNeededCents >= denominationCents[reverseIndex])) {
+        pushValueDollar += denominationCents[reverseIndex] / 100;
+        exactChangeNeededCents -= denominationCents[reverseIndex];
+      }
+    }
 
+    //Only push value to the change object's change array if push values is greater
+    //than 0. Reset push value to 0 for next denomination.
+    if (pushValueDollar > 0) {
+      change.change.push([cid[reverseIndex][0], pushValueDollar]);
+      pushValueDollar = 0;
+    }
+  }
 
+  //OPEN CASE
+  if (exactChangeNeededCents === 0) {
+    change.status = "OPEN"
+    return change;
+  }
 
-
-
-
-    cid[8][1]; // 100
-    Number_100 = cid[8][1] / 100;
-
-    cid[7][1]; // 60
-    Number_20 = cid[7][1] / 20;
-
-    cid[6][1]; // 20
-    cid[5][1]; // 55
-    cid[4][1]; // 90
-    cid[3][1]; // 4.25
-    cid[2][1]; // 3.1
-    cid[1][1]; // 2.05
-    cid[0][1]; // 1.01
-
-
+  //INSUFFICENT FUNDS due to lack of EXACT CHANGE
+  else {
+    change.status = "INSUFFICIENT_FUNDS";
+    change.change = [];
+    return change;
+  }
 }
 
-// checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]);
-
-checkCashRegister(3.26, 100, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]);
-
-// should return {status: "OPEN", change: [["TWENTY", 60], ["TEN", 20], ["FIVE", 15], ["ONE", 1], ["QUARTER", 0.5], ["DIME", 0.2], ["PENNY", 0.04]]}.
+checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]);
