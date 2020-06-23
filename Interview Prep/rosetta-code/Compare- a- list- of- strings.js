@@ -1,22 +1,22 @@
 // function for checking the array is lexically equal or not
-function allEqual(a) {
+function allEqual(arr) {
   // checking the length of array if it has 0 or 1 length return true
-  if (a.length == 0 || a.length == 1) {
+  if (arr.length == 0 || arr.length == 1) {
     return true
   }
   // initializing an empty array for taking the total of charcode of each elemnt of array
   var res = []
   // for loop through array 
-  for (var i = 0; i < a.length; i++) {  //4
+  for (var i = 0; i < arr.length; i++) {  //4
     // initilizing total of code for each element of array
-    var t = 0
+    var total = 0
     // for loop through each element of array
-    for (var j = 0; j < a[i].length; j++) {
+    for (var j = 0; j < arr[i].length; j++) {
       // adding the char code of char of element
-      t += a[i].charCodeAt(j)
+      total += arr[i].charCodeAt(j)
     }
     // pushing the total in array of res
-    res.push(t)
+    res.push(total)
   }
   // getting total for each element of array
   var total = res.reduce((a, b) => a + b)
@@ -31,7 +31,7 @@ function allEqual(a) {
     return false
   }
 }
-
+allEqual(["AA", "AA", "AA", "AA"])
 
 // function for checking the array is sorted alphabetically or not
 function azSorted(a) {
