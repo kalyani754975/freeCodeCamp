@@ -1,4 +1,5 @@
-//  A function to determine the state of the doors after the last pass. Return the final result in an array, with only the door number included in the array if it is open.
+//  A function to determine the state of the doors after the last pass. Return the final result in an array, 
+//  with only the door number included in the array if it is open.
 function getFinalOpenedDoors(numDoors) {
   // Assigned an empty array for printing the "open", "close" value.
   var arr = [];
