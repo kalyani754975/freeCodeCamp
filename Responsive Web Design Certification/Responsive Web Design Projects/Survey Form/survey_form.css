@@ -18,12 +18,30 @@ background-repeat: no-repeat;
 
 
 .form-group{
-  margin: 0 auto 15px auto;
+  margin: 0 auto 15px auto;  
 }
-.form-control{
+.form-control {
   margin: 0 auto 15px auto;
   display: block;
   width: 100%;
-  padding: 25px 50px;
+  padding: 10px 15px;
+  background-color: #fff;
+  /* background-clip: padding-box; */
+  border:1 px solid #fff;
+  /* border-radius: ; */
+
 }
+
+.text-center{
+  text-align: center;
+}
+
+#
+
+
+
+
+
+
+
 
