@@ -62,6 +62,46 @@ a:hover {
     /* text-align-last:center;
     text-align:center; */
     /* margin-left; */
-    padding-left:400px
+    padding-left:400px;
+}
+
+
+
+
+
+.logo{
+    widows: 60vw;
+}
+
+
+
+
+
+
+
+@media(max-width:600px){
+    .logo{
+        margin-top: 15px;
+        width:100%;
+        position: relative;
+    }
+
+.header-image{
+    margin-top: 15px;
+    width:100%;
+    position: relative;  
+}
+
+
 
 }
+
+
+
+
+
+
+
+
+
+
