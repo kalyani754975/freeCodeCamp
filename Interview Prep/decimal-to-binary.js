@@ -6,11 +6,7 @@ function binary(num) {
     var r = num % 2
     arr.push(r)
     num = (num - r) / 2
-
   }
-
   return arr.reverse()
-
-
 };
 console.log(...binary(7))
