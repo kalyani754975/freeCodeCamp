@@ -1,14 +1,18 @@
 function decimal(num) {
+  var sum = 0
+  var binary = 0;
   var mult = 0;
-  var sum = 0;
-  var bin = 1;
+
   while (num > 0) {
-    var final = num % 10
-    var bin = final * 2 ** mult
+    var remainder = num % 10
+
+    var binary = remainder * 2 ** mult
+
+
     num = (num / 10) >> 0
-    sum += bin
+    sum += binary
     mult++
   }
   return sum;
 }
-console.log(decimal(111))
+console.log(decimal(1001111111111111111111111))
