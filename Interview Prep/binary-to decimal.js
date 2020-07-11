@@ -15,4 +15,4 @@ function decimal(num) {
   }
   return sum;
 }
-console.log(decimal(1001111111111111111111111))
+console.log(decimal(11111111111111111111))
