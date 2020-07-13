@@ -16,7 +16,7 @@ function LinkedList() {
   };
 
   this.add = function(element){
-    // Only change code below this line
+    
 var node=new Node(element)
 if(head==null){
   head = node
